@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SlideForge Academic Template</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5b677a;
+      --blue: #1958d8;
+      --line: #d8e0ee;
+      --soft: #f6f8fc;
+      --green: #16876b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #dfe5ee;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      color: var(--ink);
+    }
+    .deck {
+      width: 1280px;
+      margin: 0 auto;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 70%, #eef9f5 100%);
+      padding: 48px 56px 42px;
+      page-break-after: always;
+    }
+    .kicker {
+      color: var(--blue);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .title {
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      font-size: 21px;
+      line-height: 1.45;
+      color: #344158;
+      margin: 0 0 28px;
+      max-width: 1040px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px 20px;
+      min-height: 150px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      line-height: 1.25;
+    }
+    .card p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.25;
+      color: var(--muted);
+    }
+    .footer {
+      position: absolute;
+      left: 56px;
+      right: 56px;
+      bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      color: #667488;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide">
+      <div class="kicker">Slide 01 · Workflow</div>
+      <h1 class="title">从大纲到 HTML，再到 PPT</h1>
+      <p class="subtitle">用 HTML 作为 AI PPT 的中间验收层，让结构、排版、图片和备注都能被检查和复用。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Markdown 大纲</h3>
+          <p>先确定逻辑、页数、标题、核心信息和备注草稿。</p>
+        </div>
+        <div class="card">
+          <h3>HTML 预览</h3>
+          <p>在浏览器中检查 16:9 页面、文本框、图片和整体视觉密度。</p>
+        </div>
+        <div class="card">
+          <h3>PPTX 导出</h3>
+          <p>导出成可演示文件，并保留备注和检查清单。</p>
+        </div>
+      </div>
+      <div class="footer"><span>SlideForge AI</span><span>01 / 01</span></div>
+    </section>
+  </main>
+</body>
+</html>

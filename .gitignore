@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+outputs/*
+!outputs/.gitkeep
+*.pptx
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.log
+.DS_Store
+Thumbs.db

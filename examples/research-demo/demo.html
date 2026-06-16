@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SlideForge AI Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e6ebf2;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: #152033;
+    }
+    .deck { width: 1280px; margin: 0 auto; }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      position: relative;
+      padding: 48px 58px 44px;
+      background: linear-gradient(145deg, #fff 0%, #f7fbff 68%, #edf7f2 100%);
+      page-break-after: always;
+    }
+    .kicker {
+      color: #1f60dc;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: 44px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      width: 1040px;
+      margin: 0 0 30px;
+      font-size: 22px;
+      line-height: 1.42;
+      color: #35435a;
+    }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .step {
+      min-height: 260px;
+      padding: 22px 20px;
+      border: 1px solid #d8e1ee;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.88);
+    }
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #1f60dc;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .step h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.22;
+    }
+    .step p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.25;
+      color: #536176;
+    }
+    .footer {
+      position: absolute;
+      left: 58px;
+      right: 58px;
+      bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      color: #647084;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<main class="deck">
+  <section class="slide">
+    <div class="kicker">Slide 01 · Demo</div>
+    <h1>SlideForge AI：AI PPT 的可复现生产线</h1>
+    <p class="subtitle">先让 AI 生成结构，再用 HTML 做中间验收，最后导出 PPT。把一次性生成，变成可检查、可修改、可沉淀的工作流。</p>
+    <div class="flow">
+      <div class="step">
+        <div class="num">1</div>
+        <h2>资料输入</h2>
+        <p>论文、报告、图片、实验结果和目标受众。</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h2>Markdown 大纲</h2>
+        <p>先确定每页讲什么，避免一开始就陷入排版细节。</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h2>HTML 预览</h2>
+        <p>在浏览器中检查 16:9、行距、图片和视觉比例。</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h2>PPTX 导出</h2>
+        <p>把确认后的 HTML 结果导出为可演示 PPT。</p>
+      </div>
+    </div>
+    <div class="footer"><span>SlideForge AI demo</span><span>01 / 01</span></div>
+  </section>
+</main>
+</body>
+</html>
