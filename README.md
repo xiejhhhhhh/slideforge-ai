@@ -1,6 +1,24 @@
+<div align="center">
+
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white)](./requirements.txt)
+[![Playwright](https://img.shields.io/badge/Playwright-HTML%20Rendering-2EAD33?style=flat-square&logo=playwright&logoColor=white)](#quick-start)
+[![PPTX Export](https://img.shields.io/badge/PPTX-Export-D24726?style=flat-square&logo=microsoftpowerpoint&logoColor=white)](./scripts/export_html_to_pptx.py)
+[![Markdown](https://img.shields.io/badge/Markdown-Outline-000000?style=flat-square&logo=markdown&logoColor=white)](./prompts/01_outline_prompt.md)
+[![HTML Preview](https://img.shields.io/badge/HTML-Preview-E34F26?style=flat-square&logo=html5&logoColor=white)](./templates/academic-16x9/template.html)
+[![AI Workflow](https://img.shields.io/badge/AI-PPT%20Workflow-5C4D7D?style=flat-square)](#slideforge-ai)
+[![License MIT](https://img.shields.io/badge/License-MIT-4C956C?style=flat-square)](./LICENSE)
+
 # SlideForge AI
 
-**SlideForge AI（幻灯锻造厂）** is an open workflow for turning AI-generated presentation ideas into editable, reviewable, and deliverable slides.
+**From Markdown outline to HTML preview, then to deliverable PPTX.**
+
+[English](./README.md) | [中文](./README_CN.md)
+
+</div>
+
+## Project Overview
+
+SlideForge AI is an open workflow for turning AI-generated presentation ideas into editable, reviewable, and deliverable slides.
 
 Instead of asking AI to create a final PPT in one fragile step, SlideForge AI uses a staged pipeline:
 
@@ -19,7 +37,7 @@ AI can produce slide content quickly, but one-shot PPT generation often fails in
 
 SlideForge AI treats PPT creation as a reproducible workflow. The HTML preview becomes the review surface, where humans can inspect and correct spacing, alignment, image placement, text boxes, and narration before exporting to PPTX.
 
-## Core Features
+## Key Features
 
 - Markdown-first slide outlining
 - 16:9 HTML slide preview
