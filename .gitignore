@@ -2,8 +2,13 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.trae/
 outputs/*
 !outputs/.gitkeep
+trae-demo/outputs/*
+trae-demo/__pycache__/
+trae-demo/archive/
+trae-demo/Chenwei_Test/
 *.pptx
 *.png
 *.jpg
@@ -12,3 +17,8 @@ outputs/*
 *.log
 .DS_Store
 Thumbs.db
+
+# Curated README / documentation screenshots are intentionally committed.
+!docs/assets/
+!docs/assets/trae-demo/
+!docs/assets/trae-demo/*.png

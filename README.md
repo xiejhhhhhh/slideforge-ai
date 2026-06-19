@@ -1,6 +1,7 @@
 <div align="center">
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white)](./requirements.txt)
+[![Flask](https://img.shields.io/badge/Flask-Demo%20Backend-000000?style=flat-square&logo=flask&logoColor=white)](./trae-demo/app.py)
 [![Playwright](https://img.shields.io/badge/Playwright-HTML%20Rendering-2EAD33?style=flat-square&logo=playwright&logoColor=white)](#quick-start)
 [![PPTX Export](https://img.shields.io/badge/PPTX-Export-D24726?style=flat-square&logo=microsoftpowerpoint&logoColor=white)](./scripts/export_html_to_pptx.py)
 [![Markdown](https://img.shields.io/badge/Markdown-Outline-000000?style=flat-square&logo=markdown&logoColor=white)](./prompts/01_outline_prompt.md)
@@ -10,74 +11,129 @@
 
 # SlideForge AI
 
-**From Markdown outline to HTML preview, then to deliverable PPTX.**
+**An AI PPT production line: requirements -> Markdown outline -> HTML slides -> speaker notes -> PPTX.**
 
 [English](./README.md) | [中文](./README_CN.md)
 
 </div>
 
-## Project Overview
+## SlideForge AI Demo Studio
 
-SlideForge AI is an open workflow for turning AI-generated presentation ideas into editable, reviewable, and deliverable slides.
+SlideForge AI Demo Studio is an interactive demo created with TRAE Work / TRAE IDE for the TRAE AI Creativity Contest, Learning & Work track.
 
-Instead of asking AI to create a final PPT in one fragile step, SlideForge AI uses a staged pipeline:
+It is designed for office workers, researchers, students, teachers, and product teams who want to turn a presentation request into a usable deck through a reviewable workflow instead of a fragile one-shot AI generation.
 
 ```text
-Source materials
-  -> Markdown outline
-  -> 16:9 HTML preview
-  -> human layout revision
+PPT requirement + optional images + optional PPT template
+  -> AI requirement analysis
+  -> Markdown PPT outline
+  -> 16:9 HTML slide preview
+  -> speaker notes
   -> PPTX export
-  -> speaker notes and QA checklist
 ```
 
-## Why This Exists
+The demo keeps every stage editable and conversational: users can revise the outline, HTML slides, and speaker notes before exporting.
 
-AI can produce slide content quickly, but one-shot PPT generation often fails in the details: unstable layout, dense text, poor line breaks, missing speaker notes, distorted figures, and hard-to-reuse prompts.
+## Demo Screenshots
 
-SlideForge AI treats PPT creation as a reproducible workflow. The HTML preview becomes the review surface, where humans can inspect and correct spacing, alignment, image placement, text boxes, and narration before exporting to PPTX.
+| Home | Requirement | Outline |
+| --- | --- | --- |
+| ![Demo home](./docs/assets/trae-demo/screen-02-demo-home.png) | ![Requirement input](./docs/assets/trae-demo/screen-04-requirement-input.png) | ![Outline generation](./docs/assets/trae-demo/screen-05-outline-generation.png) |
 
-## Key Features
+| HTML Preview | Speaker Notes | PPTX Export |
+| --- | --- | --- |
+| ![HTML preview](./docs/assets/trae-demo/screen-06-html-preview.png) | ![Speaker notes](./docs/assets/trae-demo/screen-08-speaker-notes.png) | ![PPTX export](./docs/assets/trae-demo/screen-09-export-pptx.png) |
 
-- Markdown-first slide outlining
-- 16:9 HTML slide preview
-- human revision guidelines for layout polish
-- screenshot-based PPTX export for high visual fidelity
-- reusable prompts for outline, HTML, revision, and speaker notes
-- academic/report-style demo template
+More development screenshots are stored in [docs/assets/trae-demo](./docs/assets/trae-demo).
 
 ## Quick Start
 
-Install dependencies:
+Clone the repository:
+
+```bash
+git clone https://github.com/xiejhhhhhh/slideforge-ai.git
+cd slideforge-ai/trae-demo
+```
+
+Install the demo dependencies:
 
 ```bash
 pip install -r requirements.txt
 playwright install chromium
 ```
 
-Render the demo HTML into slide screenshots:
+Start the demo:
 
 ```bash
-python scripts/render_html_screenshots.py examples/research-demo/demo.html outputs/demo-rendered
+python app.py
 ```
 
-Export the demo HTML into PPTX:
+Open:
 
-```bash
-python scripts/export_html_to_pptx.py examples/research-demo/demo.html outputs/slideforge-demo.pptx
+```text
+http://127.0.0.1:5000
 ```
+
+On Windows, you can also double-click:
+
+```text
+trae-demo/start.bat
+```
+
+Frontend-only preview is also possible by opening [trae-demo/index.html](./trae-demo/index.html), but PPTX export needs the Flask helper backend.
+
+## AI API Configuration
+
+The demo uses OpenAI-compatible chat APIs from the browser. You can configure:
+
+- API Base URL
+- model name
+- API Key
+- optional vision model
+
+API keys are stored only in browser `localStorage`. This repository intentionally commits only [.env.example](./trae-demo/.env.example), not private keys.
+
+## Core Features
+
+- AI requirement understanding for audience, duration, topic, style, and delivery format.
+- Markdown outline generation with timing, slide titles, content bullets, narration focus, visual suggestions, and layout guidance.
+- HTML slide generation from the current Markdown outline, keeping slide count aligned.
+- Uploaded image support for PNG/JPG/JPEG/WEBP/SVG/GIF workflows.
+- Speaker note generation after HTML confirmation.
+- Three PPTX export modes: screenshot, native editable drawing, and template filling.
+- Optional `.pptx` template parsing for colors, fonts, slide ratio, and style hints.
+- Local delivery workflow with downloadable outline, HTML, notes, and PPTX.
 
 ## Project Structure
 
 ```text
 slideforge-ai/
-  docs/                         workflow and layout guides
+  trae-demo/                    interactive contest demo
+    index.html                  frontend app
+    app.py                      Flask helper backend
+    start.bat                   Windows one-click launcher
+    requirements.txt            demo dependencies
+    sample_input/               safe sample requirement
+  docs/
+    assets/trae-demo/           curated README screenshots
+    trae-demo-forum-post.md     contest forum post draft
+    workflow.md                 original workflow notes
+    layout-guidelines.md        layout and revision rules
   prompts/                      reusable AI prompt templates
   templates/academic-16x9/      base HTML slide template
   examples/research-demo/       sanitized demo presentation
   scripts/                      HTML rendering and PPTX export scripts
-  outputs/                      generated files, ignored by git
 ```
+
+Generated outputs, private test materials, `.trae/`, cached files, `.pptx`, PDFs, and local screenshots are ignored by default.
+
+## Documentation
+
+- [Demo README](./trae-demo/README.md)
+- [Session evidence checklist](./trae-demo/session-evidence.md)
+- [Forum post draft](./docs/trae-demo-forum-post.md)
+- [Workflow guide](./docs/workflow.md)
+- [Layout guidelines](./docs/layout-guidelines.md)
 
 ## Best Use Cases
 
@@ -86,11 +142,11 @@ slideforge-ai/
 - course presentations
 - project roadshows
 - competition proposal decks
-- technical summaries with images and notes
+- technical summaries with figures and speaker notes
 
 ## Design Principle
 
-The goal is not to replace human judgment. The goal is to let AI draft structure and visuals, then give humans a clean inspection layer before the final PPT is produced.
+SlideForge AI does not try to replace human judgment. It turns AI PPT generation into a staged, inspectable workflow so humans can review structure, layout, images, notes, and final export quality.
 
 ## License
 
