@@ -19,7 +19,7 @@
 
 ## SlideForge AI Demo Studio
 
-SlideForge AI Demo Studio 是使用 TRAE Work / TRAE IDE 生成的可交互 Demo，用于参加 TRAE AI 创造力大赛 · 学习工作赛道。
+SlideForge AI Demo Studio 是一个面向本地运行的可交互 Demo，用来把一段 PPT 需求变成可检查、可修改、可导出的幻灯片。
 
 它面向办公白领、科研人员、学生、教师和产品团队，目标是把一段 PPT 需求稳定地变成可检查、可修改、可交付的幻灯片，而不是依赖一次性生成。
 
@@ -108,7 +108,7 @@ API Key 仅保存在浏览器 `localStorage` 中。仓库只提交 [.env.example
 
 ```text
 slideforge-ai/
-  trae-demo/                    初赛可交互 Demo
+  trae-demo/                    可交互 Demo
     index.html                  前端应用
     app.py                      Flask 辅助后端
     start.bat                   Windows 一键启动脚本
@@ -116,7 +116,6 @@ slideforge-ai/
     sample_input/               安全示例需求
   docs/
     assets/trae-demo/           README 展示截图
-    trae-demo-forum-post.md     比赛发帖草稿
     workflow.md                 原始工作流说明
     layout-guidelines.md        排版与修正规范
   prompts/                      可复用 AI 提示词模板
@@ -130,8 +129,6 @@ slideforge-ai/
 ## 文档
 
 - [Demo 使用说明](./trae-demo/README.md)
-- [Session 证据清单](./trae-demo/session-evidence.md)
-- [比赛发帖草稿](./docs/trae-demo-forum-post.md)
 - [工作流指南](./docs/workflow.md)
 - [排版规范](./docs/layout-guidelines.md)
 
@@ -141,7 +138,7 @@ slideforge-ai/
 - 论文进展展示
 - 课程报告
 - 项目路演
-- 比赛答辩
+- 项目答辩
 - 带图片和演讲备注的技术总结
 
 ## 设计原则

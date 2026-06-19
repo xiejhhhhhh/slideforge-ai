@@ -11,7 +11,7 @@ Goal: publish a usable minimal workflow.
 - screenshot rendering script
 - HTML to PPTX export script
 - layout revision checklist
-- TRAE forum post template
+- user-facing demo documentation
 
 ## v0.2.0
 

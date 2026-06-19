@@ -1,7 +1,5 @@
 # SlideForge AI Demo Studio
 
-> TRAE AI 创造力大赛 · 学习工作赛道 · 初赛 Demo
-
 SlideForge AI Demo Studio 是一个可交互的 **AI PPT 生产线** Demo：从 PPT 需求出发，依次生成 Markdown 大纲、HTML 幻灯片、演讲稿备注，并导出 PPTX。每个环节都可以继续与 AI 对话调整。
 
 ## Demo 截图
@@ -104,7 +102,6 @@ trae-demo/
   requirements.txt        Demo 依赖
   .env.example            环境变量示例，不含密钥
   README.md               本文件
-  session-evidence.md     TRAE Session 与截图记录模板
   sample_input/
     sample_requirement.txt
     README.md
@@ -117,11 +114,11 @@ trae-demo/
 - `.trae/` 本地 IDE 配置。
 - `__pycache__/` 缓存文件。
 
-## 参赛材料
+## 相关资源
 
-- [Session 证据记录](./session-evidence.md)
-- [比赛发帖草稿](../docs/trae-demo-forum-post.md)
 - [README 展示截图](../docs/assets/trae-demo)
+- [工作流指南](../docs/workflow.md)
+- [排版规范](../docs/layout-guidelines.md)
 
 ## 与主项目关系
 

@@ -19,7 +19,7 @@
 
 ## SlideForge AI Demo Studio
 
-SlideForge AI Demo Studio is an interactive demo created with TRAE Work / TRAE IDE for the TRAE AI Creativity Contest, Learning & Work track.
+SlideForge AI Demo Studio is an interactive local demo for turning a presentation request into a reviewable, exportable deck.
 
 It is designed for office workers, researchers, students, teachers, and product teams who want to turn a presentation request into a usable deck through a reviewable workflow instead of a fragile one-shot AI generation.
 
@@ -115,8 +115,7 @@ slideforge-ai/
     requirements.txt            demo dependencies
     sample_input/               safe sample requirement
   docs/
-    assets/trae-demo/           curated README screenshots
-    trae-demo-forum-post.md     contest forum post draft
+    assets/trae-demo/           README screenshots
     workflow.md                 original workflow notes
     layout-guidelines.md        layout and revision rules
   prompts/                      reusable AI prompt templates
@@ -130,8 +129,6 @@ Generated outputs, private test materials, `.trae/`, cached files, `.pptx`, PDFs
 ## Documentation
 
 - [Demo README](./trae-demo/README.md)
-- [Session evidence checklist](./trae-demo/session-evidence.md)
-- [Forum post draft](./docs/trae-demo-forum-post.md)
 - [Workflow guide](./docs/workflow.md)
 - [Layout guidelines](./docs/layout-guidelines.md)
 
@@ -141,7 +138,7 @@ Generated outputs, private test materials, `.trae/`, cached files, `.pptx`, PDFs
 - paper progress reports
 - course presentations
 - project roadshows
-- competition proposal decks
+- proposal decks
 - technical summaries with figures and speaker notes
 
 ## Design Principle
